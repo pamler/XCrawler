@@ -26,7 +26,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="/">首頁</a></li>
-              <% if (!user) { %>
+              <% if (!locals.user) { %>
                 <li><a href="/login">登入</a></li>
                 <li><a href="/reg">註冊</a></li>
               <% } else { %>
@@ -39,14 +39,14 @@
     </div>
 
     <div id="container" class="container">
-      <% if (success) { %>
+      <% if (locals.success) { %>
         <div class="alert alert-success">
-          <%= success %>
+          <%= locals.success %>
         </div>
       <% } %>
-      <% if (error) { %>
+      <% if (locals.error) { %>
         <div class="alert alert-error">
-          <%= error %>
+          <%= locals.error %>
         </div>
       <% } %>
       <%- body %>

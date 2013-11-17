@@ -1,4 +1,4 @@
-<% if (!user) { %>
+<% if (!locals.user) { %>
   <div class="hero-unit">
     <h1>歡迎來到 Microblog</h1>
     <p>Microblog 是一個基於 Node.js 的微博系統。</p>
@@ -8,6 +8,6 @@
     </p>
   </div>
 <% } else { %>
-  <%- partial('say') %> 
+  <%- include say %> 
 <% } %>
-<%- partial('posts') %> 
+<%- include posts %> 

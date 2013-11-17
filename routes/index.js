@@ -10,7 +10,7 @@ module.exports = function(app) {
       }
       res.render('index', {
         title: '首頁',
-        posts: posts,
+        posts: posts
       });
     });
   });
