@@ -1,4 +1,4 @@
-<% if (user) { %>
-  <%- partial('say') %> 
+<% if (locals.user) { %>
+  <%- include say %> 
 <% } %>
-<%- partial('posts') %> 
+<%- include posts %> 
